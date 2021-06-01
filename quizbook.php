@@ -28,3 +28,9 @@ register_deactivation_hook( __FILE__, 'quizbook_remove_role' );
 // Add Capabilities to the quizzes
 register_activation_hook( __FILE__, 'quizbook_add_capabilities' );
 register_deactivation_hook( __FILE__, 'quizbook_remove_capabilities' );
+
+// Add a Shortcode
+require_once plugin_dir_path(__FILE__) . 'includes/shortcode.php';
+
+// Functions
+require_once plugin_dir_path(__FILE__) . 'includes/functions.php';

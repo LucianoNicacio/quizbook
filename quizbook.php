@@ -19,3 +19,12 @@ register_activation_hook( __FILE__, 'quizbook_rewrite_flush' );
 
 // Add metaboxes to the quizzes
 require_once plugin_dir_path(__FILE__) . 'includes/metaboxes.php';
+
+// Add Roles to the quizzes
+require_once plugin_dir_path(__FILE__) . 'includes/roles.php';
+register_activation_hook( __FILE__, 'quizbook_create_role' );
+register_deactivation_hook( __FILE__, 'quizbook_remove_role' );
+
+// Add Capabilities to the quizzes
+register_activation_hook( __FILE__, 'quizbook_add_capabilities' );
+register_deactivation_hook( __FILE__, 'quizbook_remove_capabilities' );

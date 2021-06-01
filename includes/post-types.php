@@ -36,12 +36,13 @@ function quizbook_post_type() {
         'show_in_menu'       => true,
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'quizzes' ),
-        'capability_type'    => 'post',
+        'capability_type'    => array('quiz', 'quizzes'),
         'menu_position'      => 6,
         'menu_icon'          => 'dashicons-welcome-learn-more',
         'has_archive'        => true,
         'hierarchical'       => false,
         'supports'           => array( 'title', 'editor'),
+        'map_meta_cap'       => true,
     );
 
     register_post_type( 'quizzes', $args );

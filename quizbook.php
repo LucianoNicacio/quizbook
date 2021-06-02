@@ -34,3 +34,6 @@ require_once plugin_dir_path(__FILE__) . 'includes/shortcode.php';
 
 // Functions
 require_once plugin_dir_path(__FILE__) . 'includes/functions.php';
+
+// Add CSS and JS files
+require_once plugin_dir_path(__FILE__) . 'includes/scripts.php';

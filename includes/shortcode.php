@@ -23,7 +23,7 @@ function quizbook_shortcode($atts) {
                             $result = quizbook_filter_questions($key);
                             $number = explode('_', $key);
                             if($result === 0) { ?>
-                                <div id="<?php echo get_the_ID() . ":" . $number[2]; ?>">
+                                <div id="<?php echo get_the_ID() . ":" . $number[2]; ?>" class="answer">
                                   <?php echo $option[0]; ?>
                                 </div>
                             <?php }
